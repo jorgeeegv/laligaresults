@@ -1,13 +1,12 @@
-import CardLeague from "./shared/CardLeague";
-import {getLeagues} from './services/getLeagues'
+import CharacterCard from "./shared/CharacterCard";
+import {getCharacters} from './services/getCharacters'
 export default async function HomePage(){
-    const leagues = await getLeagues();
+    const characters = await getCharacters();
     return (
         <div className="grid grid-cols-4 place-content-center gap-2">
-           { leagues.response.slice(0,100).map((league:any) => (
-            <CardLeague key={league.league.id} league={league.league}/>
+           { characters.results.map((character:any) => (
+            <CharacterCard key={character.id} character={character}/>
            ))
-
            }
         </div>    
     )
