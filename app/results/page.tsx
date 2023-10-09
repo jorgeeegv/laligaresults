@@ -1,7 +1,3 @@
-export default function ResultsDashboard(){
-    return (
-        <section>
-            Results
-        </section>
-    )
+export default function ResultsDashboard() {
+    return <section>Results</section>;
 }

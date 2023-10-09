@@ -1,22 +1,20 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-import Navbar from './shared/NavBar'
+import './globals.css';
+import { Inter } from 'next/font/google';
+import Navbar from './shared/NavBar';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Navbar/>
-        <div className='mx-auto'>
-        {children}
-        </div>
-        </body>
-    </html>
-  )
+    return (
+        <html lang="en">
+            <body className={inter.className}>
+                <Navbar />
+                <div className="mx-auto my-10">{children}</div>
+            </body>
+        </html>
+    );
 }
